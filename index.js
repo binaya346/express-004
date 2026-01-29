@@ -1,7 +1,10 @@
 import express from 'express'
 import mongoose from 'mongoose';
-import serviceRoute from "./routes/services.js";
 import bodyParser from 'body-parser';
+
+import serviceRoute from "./routes/services.js";
+import aboutRoute from "./routes/about-us.js";
+
 
 const app = express()
 
@@ -18,8 +21,9 @@ try {
     console.log("failed to connect")
 }
 
-app.get("/", (req, res)=> {
+app.get("/", (req, res) => {
     res.send("Health check okay!!")
 })
 
-app.use("/services", serviceRoute);
+app.use("/services", serviceRoute)
+app.use("/about", aboutRoute)
