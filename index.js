@@ -4,12 +4,13 @@ import bodyParser from 'body-parser';
 
 import serviceRoute from "./routes/services.js";
 import aboutRoute from "./routes/about-us.js";
-
+import portfolioRoute from "./routes/portfolios.js";
 
 const app = express()
 
 app.use(bodyParser.json())
-app.use(bodyParser.urlencoded())
+app.use(bodyParser.urlencoded({ extended: true }))
+app.use(express.static('public'));
 
 try {
     await mongoose.connect('mongodb://127.0.0.1:27017/antbyte')
@@ -27,3 +28,4 @@ app.get("/", (req, res) => {
 
 app.use("/services", serviceRoute)
 app.use("/about", aboutRoute)
+app.use("/portfolios", portfolioRoute)

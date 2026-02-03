@@ -32,3 +32,14 @@ Controller => Implement core business logic | Authentication/Authorization
     404: Resource not available 
 500 - 599: Server error
     500, 501, 503 => Server error. 
+
+
+Middleware:
+1. Request receive
+2. Middleware
+3. Request handle
+
+A task that needs to be done on most of your api request. 
+1. Body parser => All post & put request jasma body aauxa, 
+2. File/image upload => actual file will be saved on device => The string will be saved on database. 
+3. Authentication => Check if the user is logged in or not
