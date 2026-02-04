@@ -5,6 +5,7 @@ import bodyParser from 'body-parser';
 import serviceRoute from "./routes/services.js";
 import aboutRoute from "./routes/about-us.js";
 import portfolioRoute from "./routes/portfolios.js";
+import authRoute from "./routes/auth.js";
 
 const app = express()
 
@@ -29,3 +30,4 @@ app.get("/", (req, res) => {
 app.use("/services", serviceRoute)
 app.use("/about", aboutRoute)
 app.use("/portfolios", portfolioRoute)
+app.use("/auth", authRoute)
