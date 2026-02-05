@@ -32,6 +32,9 @@ export const getPortfolioById = async (req, res) => {
 }
 
 export const createPortfolio = async (req, res) => {
+    const user = req.user;
+    console.log("user")
+    console.log(user)
     const body = req.body;
     const image = req.file ? req.file.filename : null;
     body.image = image;

@@ -6,13 +6,12 @@ import {
     logout
 } from "../controller/auth.js";
 import upload from "../middleware/storage.js";
-import auth from "../middleware/auth.js";
 
 const router = express.Router();
 
 router.post("/register", upload.single('image'), register);
 router.post("/login", login);
 router.post("/refresh", refreshToken);
-router.post("/logout", auth, logout);
+router.post("/logout", logout);
 
 export default router;

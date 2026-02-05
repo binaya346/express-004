@@ -1,7 +1,7 @@
 import express from 'express'
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
-
+import 'dotenv/config'
 import serviceRoute from "./routes/services.js";
 import aboutRoute from "./routes/about-us.js";
 import portfolioRoute from "./routes/portfolios.js";
@@ -13,10 +13,12 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static('public'));
 
+const { DATABASE_HOST, DATABASE_PORT, DATABASE_NAME, APPLICATION_PORT } = process.env;
+
 try {
-    await mongoose.connect('mongodb://127.0.0.1:27017/antbyte')
-    app.listen(8080, () => {
-        console.log('Server is running on http://localhost:8080')
+    await mongoose.connect(`mongodb://${DATABASE_HOST}:${DATABASE_PORT}/${DATABASE_NAME}`)
+    app.listen(APPLICATION_PORT, () => {
+        console.log(`Server is running on http://localhost:${APPLICATION_PORT}`)
     })
     console.log('Successfully connected with database')
 } catch (e) {
