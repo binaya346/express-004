@@ -1,10 +1,13 @@
 import Model from "../model/about-us.js"
+import logger from "../utils/logger.js";
 
 export const getAllAboutUs = async (req, res) => {
     try {
         const response = await Model.find()
+        logger.info(`Response created successfully`);
         res.status(200).json(response)
     } catch (error) {
+        logger.error("Error", error);
         res.status(400).json({
             "message": "Error: Unable to Fetch the aboutUss.",
             "error": error
@@ -18,12 +21,14 @@ export const getAboutUsById = async (req, res) => {
     try {
         const response = await Model.findById(id)
 
-        if(response){
+        if (response) {
+            logger.info("Successfully fetched the about us details for ID" + id)
             return res.status(200).json(response)
         }
-        res.status(404).json({"message":"The provided id is not a valid aboutUs id"})
-        
+        res.status(404).json({ "message": "The provided id is not a valid aboutUs id" })
+
     } catch (error) {
+        logger.error("Error:", error)
         res.status(400).json({
             "message": "Error: Unable to Fetch the aboutUss.",
             "error": error
@@ -55,8 +60,8 @@ export const updateAboutUs = async (req, res) => {
 
     try {
         const isaboutUsAvailable = await Model.findById(id);
-        if(!isaboutUsAvailable){
-            return res.status(404).json({"message":"Cannot Update: The provided id is not a valid aboutUs id"})
+        if (!isaboutUsAvailable) {
+            return res.status(404).json({ "message": "Cannot Update: The provided id is not a valid aboutUs id" })
         }
 
         await Model.findByIdAndUpdate(id, body, { new: true, runValidators: true })
@@ -78,12 +83,12 @@ export const deleteAboutUs = async (req, res) => {
 
     try {
         const isaboutUsAvailable = await Model.findById(id);
-        if(!isaboutUsAvailable){
-            return res.status(404).json({"message":"Cannot Delete: The provided id is not a valid aboutUs id"})
+        if (!isaboutUsAvailable) {
+            return res.status(404).json({ "message": "Cannot Delete: The provided id is not a valid aboutUs id" })
         }
 
         await Model.findByIdAndDelete(id)
-        res.status(200).json({"Message":`Successfully deleted the aboutUs with id ${id}`})
+        res.status(200).json({ "Message": `Successfully deleted the aboutUs with id ${id}` })
 
     } catch (error) {
         res.status(400).json({

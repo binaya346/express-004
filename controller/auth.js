@@ -4,6 +4,7 @@ import {
     generateRefreshToken
 } from "../utils/jwt.js";
 import jwt from "jsonwebtoken";
+import logger from "../utils/logger.js"
 
 /* REGISTER */
 export const register = async (req, res) => {
@@ -25,11 +26,13 @@ export const login = async (req, res) => {
 
         const user = await User.findOne({ email }).select("+password");
         if (!user) {
+            logger.error("Invalid credentials")
             return res.status(401).json({ message: "Invalid credentials" });
         }
 
         const isMatch = await user.comparePassword(password);
         if (!isMatch) {
+            logger.error("Invalid credentials")
             return res.status(401).json({ message: "Invalid credentials" });
         }
 
@@ -44,6 +47,7 @@ export const login = async (req, res) => {
             refreshToken
         });
     } catch (err) {
+        logger.error("Error login user", err)
         res.status(500).json({ message: err.message });
     }
 };

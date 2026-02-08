@@ -1,0 +1,20 @@
+2026-02-08 18:03:46 [error]: Invalid credentials
+2026-02-08 18:04:59 [error]: Error: "expiresIn" should be a number of seconds or string representing a timespan
+    at /Users/binayadai/Documents/techaxis/express-004/node_modules/jsonwebtoken/sign.js:56:15
+    at Array.forEach (<anonymous>)
+    at validate (/Users/binayadai/Documents/techaxis/express-004/node_modules/jsonwebtoken/sign.js:47:6)
+    at validateOptions (/Users/binayadai/Documents/techaxis/express-004/node_modules/jsonwebtoken/sign.js:62:10)
+    at module.exports [as sign] (/Users/binayadai/Documents/techaxis/express-004/node_modules/jsonwebtoken/sign.js:171:5)
+    at generateAccessToken (file:///Users/binayadai/Documents/techaxis/express-004/utils/jwt.js:11:16)
+    at login (file:///Users/binayadai/Documents/techaxis/express-004/controller/auth.js:39:29)
+2026-02-08 18:16:16 [error]: TypeError: Model.findByIdss is not a function
+    at getAllPortfolios (file:///Users/binayadai/Documents/techaxis/express-004/controller/portfolios.js:6:38)
+    at Layer.handleRequest (/Users/binayadai/Documents/techaxis/express-004/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/binayadai/Documents/techaxis/express-004/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/binayadai/Documents/techaxis/express-004/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/binayadai/Documents/techaxis/express-004/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/binayadai/Documents/techaxis/express-004/node_modules/router/lib/layer.js:152:17)
+    at /Users/binayadai/Documents/techaxis/express-004/node_modules/router/index.js:295:15
+    at processParams (/Users/binayadai/Documents/techaxis/express-004/node_modules/router/index.js:582:12)
+    at next (/Users/binayadai/Documents/techaxis/express-004/node_modules/router/index.js:291:5)
+    at router.handle (/Users/binayadai/Documents/techaxis/express-004/node_modules/router/index.js:186:3)

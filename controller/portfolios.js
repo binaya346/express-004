@@ -1,10 +1,13 @@
 import Model from "../model/portfolios.js"
+import logger from "../utils/logger.js"
 
 export const getAllPortfolios = async (req, res) => {
     try {
-        const response = await Model.find()
+        const response = await Model.findByIdss()
+        logger.info("Successfully provided portfolio")
         res.status(200).json(response)
     } catch (error) {
+        logger.error("Unable to provide portfolio", error)
         res.status(400).json({
             "message": "Error: Unable to Fetch the Portfolios.",
             "error": error
@@ -18,11 +21,11 @@ export const getPortfolioById = async (req, res) => {
     try {
         const response = await Model.findById(id)
 
-        if(response){
+        if (response) {
             return res.status(200).json(response)
         }
-        res.status(404).json({"message":"The provided id is not a valid portfolio id"})
-        
+        res.status(404).json({ "message": "The provided id is not a valid portfolio id" })
+
     } catch (error) {
         res.status(400).json({
             "message": "Error: Unable to Fetch the portfolios.",
@@ -60,8 +63,8 @@ export const updatePortfolio = async (req, res) => {
 
     try {
         const isPortfolioAvailable = await Model.findById(id);
-        if(!isPortfolioAvailable){
-            return res.status(404).json({"message":"Cannot Update: The provided id is not a valid portfolio id"})
+        if (!isPortfolioAvailable) {
+            return res.status(404).json({ "message": "Cannot Update: The provided id is not a valid portfolio id" })
         }
 
         await Model.findByIdAndUpdate(id, body, { new: true, runValidators: true })
@@ -83,12 +86,12 @@ export const deletePortfolio = async (req, res) => {
 
     try {
         const isPortfolioAvailable = await Model.findById(id);
-        if(!isPortfolioAvailable){
-            return res.status(404).json({"message":"Cannot Delete: The provided id is not a valid portfolio id"})
+        if (!isPortfolioAvailable) {
+            return res.status(404).json({ "message": "Cannot Delete: The provided id is not a valid portfolio id" })
         }
 
         await Model.findByIdAndDelete(id)
-        res.status(200).json({"Message":`Successfully deleted the portfolio with id ${id}`})
+        res.status(200).json({ "Message": `Successfully deleted the portfolio with id ${id}` })
 
     } catch (error) {
         res.status(400).json({

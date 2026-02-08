@@ -3,7 +3,7 @@ const {
     JWT_ACCESS_SECRET,
     ACCESS_TOKEN_EXPIRES,
     JWT_REFRESH_SECRET,
-    REFRESH_TOKEN_EXPIRES
+    REFRESH_TOKEN_EXPIRES,
 } = process.env;
 
 export const generateAccessToken = (user) => {
@@ -14,7 +14,7 @@ export const generateAccessToken = (user) => {
             role: user.role
         },
         JWT_ACCESS_SECRET,
-        { expiresIn: ACCESS_TOKEN_EXPIRES }
+        { expiresIn: REFRESH_TOKEN_EXPIRES }
     );
 };
 

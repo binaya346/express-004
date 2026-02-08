@@ -13,6 +13,11 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static('public'));
 
+// app.use((req, res, next) => {
+//     logger.info(`${req.method} ${req.url}`);
+//     next();
+// });
+
 const { DATABASE_HOST, DATABASE_PORT, DATABASE_NAME, APPLICATION_PORT } = process.env;
 
 try {
@@ -24,6 +29,8 @@ try {
 } catch (e) {
     console.log("failed to connect")
 }
+
+
 
 app.get("/", (req, res) => {
     res.send("Health check okay!!")
