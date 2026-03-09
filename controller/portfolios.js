@@ -3,7 +3,7 @@ import logger from "../utils/logger.js"
 
 export const getAllPortfolios = async (req, res) => {
     try {
-        const response = await Model.findByIdss()
+        const response = await Model.find()
         logger.info("Successfully provided portfolio")
         res.status(200).json(response)
     } catch (error) {
@@ -35,7 +35,6 @@ export const getPortfolioById = async (req, res) => {
 }
 
 export const createPortfolio = async (req, res) => {
-    const user = req.user;
     const body = req.body;
     const image = req.file ? req.file.filename : null;
     body.image = image;
@@ -58,6 +57,8 @@ export const createPortfolio = async (req, res) => {
 export const updatePortfolio = async (req, res) => {
     const body = req.body;
     const id = req.params.id;
+    const image = req.file ? req.file.filename : null;
+    body.image = image;
 
     try {
         const isPortfolioAvailable = await Model.findById(id);

@@ -1,5 +1,6 @@
 import express from "express";
 import { getAllServices, getServiceById, createService, updateService, deleteService } from "../controller/services.js";
+import { auth } from "../middleware/auth.js";
 
 const router = express.Router();
 
@@ -12,8 +13,8 @@ const router = express.Router();
 
 router.get("/", getAllServices)
 router.get("/:id", getServiceById)
-router.post("/", createService)
-router.put("/:id", updateService)
-router.delete("/:id", deleteService)
+router.post("/", auth, createService)
+router.put("/:id", auth, updateService)
+router.delete("/:id", auth, deleteService)
 
 export default router;

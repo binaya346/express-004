@@ -19,7 +19,7 @@ const schema = new mongoose.Schema({
     type: {
         type: String,
         enum: {
-            values: ['Product', 'Manpower'],
+            values: ['Product', 'Manpower', "Consultation", "Support"],
             message: '{VALUE} is not supported'
         }
     }

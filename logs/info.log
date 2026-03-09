@@ -1,2 +1,100 @@
 2026-02-08 18:15:21 [info]: Successfully provided portfolio
 2026-02-08 18:16:04 [info]: Successfully provided portfolio
+2026-02-19 18:12:28 [error]: Invalid credentials
+2026-02-19 18:12:43 [error]: Invalid credentials
+2026-02-19 18:13:06 [error]: Invalid credentials
+2026-02-19 18:13:57 [error]: Invalid credentials
+2026-02-19 18:14:06 [error]: Invalid credentials
+2026-02-19 18:14:27 [error]: Invalid credentials
+2026-02-19 18:15:36 [error]: Invalid credentials
+2026-02-27 17:32:38 [error]: Invalid credentials
+2026-02-27 17:32:44 [error]: Invalid credentials
+2026-02-27 17:32:48 [error]: Invalid credentials
+2026-02-27 17:42:07 [error]: TypeError: Model.findByIdss is not a function
+    at getAllPortfolios (file:///Users/binayadai/Documents/techaxis/express-004/controller/portfolios.js:6:38)
+    at Layer.handleRequest (/Users/binayadai/Documents/techaxis/express-004/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/binayadai/Documents/techaxis/express-004/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/binayadai/Documents/techaxis/express-004/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/binayadai/Documents/techaxis/express-004/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/binayadai/Documents/techaxis/express-004/node_modules/router/lib/layer.js:152:17)
+    at /Users/binayadai/Documents/techaxis/express-004/node_modules/router/index.js:295:15
+    at processParams (/Users/binayadai/Documents/techaxis/express-004/node_modules/router/index.js:582:12)
+    at next (/Users/binayadai/Documents/techaxis/express-004/node_modules/router/index.js:291:5)
+    at router.handle (/Users/binayadai/Documents/techaxis/express-004/node_modules/router/index.js:186:3)
+2026-02-27 17:42:10 [error]: TypeError: Model.findByIdss is not a function
+    at getAllPortfolios (file:///Users/binayadai/Documents/techaxis/express-004/controller/portfolios.js:6:38)
+    at Layer.handleRequest (/Users/binayadai/Documents/techaxis/express-004/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/binayadai/Documents/techaxis/express-004/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/binayadai/Documents/techaxis/express-004/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/binayadai/Documents/techaxis/express-004/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/binayadai/Documents/techaxis/express-004/node_modules/router/lib/layer.js:152:17)
+    at /Users/binayadai/Documents/techaxis/express-004/node_modules/router/index.js:295:15
+    at processParams (/Users/binayadai/Documents/techaxis/express-004/node_modules/router/index.js:582:12)
+    at next (/Users/binayadai/Documents/techaxis/express-004/node_modules/router/index.js:291:5)
+    at router.handle (/Users/binayadai/Documents/techaxis/express-004/node_modules/router/index.js:186:3)
+2026-02-27 17:42:51 [error]: TypeError: Model.findByIdss is not a function
+    at getAllPortfolios (file:///Users/binayadai/Documents/techaxis/express-004/controller/portfolios.js:6:38)
+    at Layer.handleRequest (/Users/binayadai/Documents/techaxis/express-004/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/binayadai/Documents/techaxis/express-004/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/binayadai/Documents/techaxis/express-004/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/binayadai/Documents/techaxis/express-004/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/binayadai/Documents/techaxis/express-004/node_modules/router/lib/layer.js:152:17)
+    at /Users/binayadai/Documents/techaxis/express-004/node_modules/router/index.js:295:15
+    at processParams (/Users/binayadai/Documents/techaxis/express-004/node_modules/router/index.js:582:12)
+    at next (/Users/binayadai/Documents/techaxis/express-004/node_modules/router/index.js:291:5)
+    at router.handle (/Users/binayadai/Documents/techaxis/express-004/node_modules/router/index.js:186:3)
+2026-02-27 17:43:14 [info]: Successfully provided portfolio
+2026-02-27 17:49:04 [info]: Successfully provided portfolio
+2026-02-27 17:49:05 [info]: Successfully provided portfolio
+2026-02-27 17:50:28 [info]: Successfully provided portfolio
+2026-02-27 17:50:28 [info]: Successfully provided portfolio
+2026-02-27 17:53:41 [info]: Successfully provided portfolio
+2026-02-27 17:53:42 [info]: Successfully provided portfolio
+2026-02-27 17:53:50 [info]: Successfully provided portfolio
+2026-02-27 17:54:19 [info]: Successfully provided portfolio
+2026-02-27 18:06:30 [info]: Successfully provided portfolio
+2026-02-27 18:06:49 [info]: Successfully provided portfolio
+2026-02-27 18:07:06 [info]: Successfully provided portfolio
+2026-02-27 18:07:13 [info]: Successfully provided portfolio
+2026-02-27 18:07:24 [info]: Successfully provided portfolio
+2026-02-27 18:07:47 [info]: Successfully provided portfolio
+2026-02-27 18:07:53 [info]: Successfully provided portfolio
+2026-02-27 18:08:53 [info]: Successfully provided portfolio
+2026-02-27 18:11:37 [info]: Successfully provided portfolio
+2026-02-27 18:12:02 [info]: Successfully provided portfolio
+2026-02-27 18:14:13 [info]: Successfully provided portfolio
+2026-02-27 18:14:32 [info]: Successfully provided portfolio
+2026-02-27 18:15:34 [info]: Successfully provided portfolio
+2026-02-27 18:15:35 [info]: Successfully provided portfolio
+2026-02-27 18:21:18 [info]: Successfully provided portfolio
+2026-02-27 18:21:57 [info]: Successfully provided portfolio
+2026-02-27 18:22:42 [info]: Successfully provided portfolio
+2026-02-27 18:22:55 [info]: Successfully provided portfolio
+2026-02-27 18:24:01 [info]: Successfully provided portfolio
+2026-02-27 18:24:03 [error]: TokenExpiredError: jwt expired
+    at /Users/binayadai/Documents/techaxis/express-004/node_modules/jsonwebtoken/verify.js:190:21
+    at getSecret (/Users/binayadai/Documents/techaxis/express-004/node_modules/jsonwebtoken/verify.js:97:14)
+    at module.exports [as verify] (/Users/binayadai/Documents/techaxis/express-004/node_modules/jsonwebtoken/verify.js:101:10)
+    at auth (file:///Users/binayadai/Documents/techaxis/express-004/middleware/auth.js:13:29)
+    at Layer.handleRequest (/Users/binayadai/Documents/techaxis/express-004/node_modules/router/lib/layer.js:152:17)
+    at next (/Users/binayadai/Documents/techaxis/express-004/node_modules/router/lib/route.js:157:13)
+    at Route.dispatch (/Users/binayadai/Documents/techaxis/express-004/node_modules/router/lib/route.js:117:3)
+    at handle (/Users/binayadai/Documents/techaxis/express-004/node_modules/router/index.js:435:11)
+    at Layer.handleRequest (/Users/binayadai/Documents/techaxis/express-004/node_modules/router/lib/layer.js:152:17)
+    at /Users/binayadai/Documents/techaxis/express-004/node_modules/router/index.js:295:15
+2026-02-27 18:24:21 [info]: Successfully provided portfolio
+2026-02-27 18:24:24 [info]: Successfully provided portfolio
+2026-02-27 18:24:26 [info]: Successfully provided portfolio
+2026-02-27 18:24:30 [info]: Successfully provided portfolio
+2026-02-27 18:24:32 [info]: Successfully provided portfolio
+2026-02-27 18:24:36 [info]: Successfully provided portfolio
+2026-02-27 18:24:39 [info]: Successfully provided portfolio
+2026-02-27 18:24:40 [info]: Successfully provided portfolio
+2026-03-09 17:37:44 [error]: Invalid credentials
+2026-03-09 17:37:48 [error]: Invalid credentials
+2026-03-09 17:37:51 [error]: Invalid credentials
+2026-03-09 17:37:54 [error]: Invalid credentials
+2026-03-09 17:50:15 [info]: Successfully provided portfolio
+2026-03-09 17:50:15 [info]: Successfully provided portfolio
+2026-03-09 18:11:39 [error]: Token not found for user
+2026-03-09 18:12:00 [error]: Token not found for user

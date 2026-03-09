@@ -1,7 +1,7 @@
 import express from "express";
 import { getAllPortfolios, getPortfolioById, createPortfolio, updatePortfolio, deletePortfolio } from "../controller/portfolios.js";
 import upload from "../middleware/storage.js";
-import { auth, superAdminAuth } from "../middleware/auth.js";
+import { auth } from "../middleware/auth.js";
 
 const router = express.Router();
 
@@ -14,7 +14,7 @@ const router = express.Router();
 
 router.get("/", getAllPortfolios) // json data in body
 router.get("/:id", getPortfolioById) // json data in body
-router.post("/", superAdminAuth, upload.single("thumbnail"), createPortfolio) // form-data in body
-router.put("/:id", auth, upload.single("thumbnail"), updatePortfolio) // form-data in body
+router.post("/", auth, upload.single("thumbnail"), createPortfolio) // form-data in body
+router.put("/:id", auth,  upload.single("thumbnail"), updatePortfolio) // form-data in body
 router.delete("/:id", auth, deletePortfolio) // json data in body
 export default router;

@@ -6,9 +6,11 @@ import serviceRoute from "./routes/services.js";
 import aboutRoute from "./routes/about-us.js";
 import portfolioRoute from "./routes/portfolios.js";
 import authRoute from "./routes/auth.js";
+import cors from 'cors';
 
 const app = express()
 
+app.use(cors())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.static('public'));
