@@ -23,7 +23,9 @@ app.use(express.static('public'));
 const { DATABASE_HOST, DATABASE_PORT, DATABASE_NAME, APPLICATION_PORT, CONNECTION_STRING } = process.env;
 
 try {
-    await mongoose.connect(CONNECTION_STRING)
+    await mongoose.connect(CONNECTION_STRING, {
+        dbName: 'antbyte'
+    })
     app.listen(APPLICATION_PORT, () => {
         console.log(`Server is running on http://localhost:${APPLICATION_PORT}`)
     })
