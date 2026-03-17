@@ -20,10 +20,10 @@ app.use(express.static('public'));
 //     next();
 // });
 
-const { DATABASE_HOST, DATABASE_PORT, DATABASE_NAME, APPLICATION_PORT } = process.env;
+const { DATABASE_HOST, DATABASE_PORT, DATABASE_NAME, APPLICATION_PORT, CONNECTION_STRING } = process.env;
 
 try {
-    await mongoose.connect(`mongodb://${DATABASE_HOST}:${DATABASE_PORT}/${DATABASE_NAME}`)
+    await mongoose.connect(CONNECTION_STRING)
     app.listen(APPLICATION_PORT, () => {
         console.log(`Server is running on http://localhost:${APPLICATION_PORT}`)
     })
