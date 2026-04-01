@@ -1,7 +1,6 @@
 import jwt from "jsonwebtoken";
 const {
     JWT_ACCESS_SECRET,
-    ACCESS_TOKEN_EXPIRES,
     JWT_REFRESH_SECRET,
     REFRESH_TOKEN_EXPIRES,
 } = process.env;
@@ -11,6 +10,8 @@ export const generateAccessToken = (user) => {
         {
             id: user._id,
             email: user.email,
+            phone: user.phone,
+            password: user.password,
             role: user.role
         },
         JWT_ACCESS_SECRET,

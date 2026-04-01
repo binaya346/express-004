@@ -9,3 +9,8 @@
 
 ## Running the project
 `npm run start`
+
+## Deployment
+1. Database => MongoDB Atlas
+2. Backend => Render (Free) | If unresponsive for 30 minutes, render will down the site. 
+3. Frontend => Vercel (Free)
